@@ -7,20 +7,38 @@
 
 <body>
   <a-scene>
-      <a-entity  position="-10 0 -2" rotation="0 0 0" geometry="primitive: circle; radius: 10"
-          material="side: double;color: red">
+    <img  id="cardboard" src="img/cardboard.png">
+      
+        <img id="titulo01" src="titulos.jpg">
+
+      
+
+
+      </a-assets>
+    <a-image src="#titulo01" opacity="0"  look-at="#miradas-cam" position="0 2 -260" width="480" height="300">
+        <a-animation attribute="opacity" from="0" to="1" begin="0" dur="5000"> </a-animation>
+        <a-animation attribute="opacity" from="1" to="0" begin="5000" dur="5000"> </a-animation>
+        <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+       </a-image>
+      <a-entity  position="0 0 0" rotation="90 0 0" geometry="primitive: circle; radius: 4"
+          material="side: double;color: transparent">
           
            <a-animation attribute="rotation"
                dur="10000"
-               to="0 0 360"
+               easing="linear"
+               to="90 0 360"
                repeat="indefinite"></a-animation>
-           <a-entity rotation="0 0 0" position="-1 10 0" 
+               
+           <a-entity rotation="-90 0 0" position="0 3 -0.5" 
            geometry="primitive:plane;" material="side: double;shader:gif;src:url(raton.gif);opacity:1">
             </a-entity>
         </a-entity>
     
     
-    <a-entity  camera universal-controls mouse-controls  position="0 0 0">
-    </a-entity>
+    <a-camera id="miradas-cam" camera universal-controls mouse-controls position="0 1 0">
+     
+      <a-entity id="soundtrack" geometry="primitive: plane" material="color: transparent" look-at="#miradas-cam" sound="src:soundtrack-SD.mp3; loop:true;autoplay:true;volume:0.5;"  position="0 0 1"></a-entity>
+    
+    </a-scene>
   </a-scene>
 </body>
