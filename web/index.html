@@ -7,18 +7,13 @@
 
 <body>
   <a-scene>
-      <a-entity  position="-10 0 -2" rotation="0 0 0" geometry="primitive: circle; radius: 10"
-          material="side: double;color: red">
-          
-           <a-animation attribute="rotation"
+     <a-entity look-at="[camera]" position="-3 0 -2" geometry="primitive:box;" material="shader:gif;src:url(raton.gif);optacity:1">
+       <a-animation attribute="rotation"
                dur="10000"
-               to="0 0 360"
+               fill="forwards"
+               to="0 360 0"
                repeat="indefinite"></a-animation>
-           <a-entity rotation="0 0 0" position="-1 10 0" 
-           geometry="primitive:plane;" material="side: double;shader:gif;src:url(raton.gif);opacity:1">
-            </a-entity>
-        </a-entity>
-    
+    </a-entity>
     
     <a-entity  camera universal-controls mouse-controls  position="0 0 0">
     </a-entity>
