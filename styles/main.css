@@ -1,3 +1,18 @@
-body{
-	background: #000;
+html{
+background: #000;
+}
+:-webkit-full-screen {
+background:  #000;
+}
+
+:-moz-full-screen {
+background:  #000;
+}
+
+:-ms-fullscreen {
+background:  #000;
+}
+
+:fullscreen {
+background:  #000;
 }
