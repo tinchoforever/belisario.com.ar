@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+ <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+</head>
+
+<body>
+
+ <a-scene>
+
+   <a-assets>
+
+   </a-assets>
+
+   <a-entity rotation="270 -180 180" 
+           position="0 3 -0.5" 
+           geometry="primitive:plane;" 
+           material="shader:gif;side:double;src:url(giphy.gif);transparent:true;opacity:1;">
+            </a-entity>
+
+ </a-scene>
+
+
+</body>
+</html>
