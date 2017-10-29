@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <title>Hello, World! • A-Frame</title>
   <meta name="description" content="Hello, World! • A-Frame">
-  <script src="aframe.js"></script>
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
    <script src="/scripts/aframe-gif-shader.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v1.17.0/dist/aframe-extras.min.js"></script>
 
-  <script src="camera.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+  <script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>   
+  
+  
   <style>   
     
       html, body, #root, #arVideo {
@@ -79,26 +82,7 @@
   </a-scene>
 
 
-  <video autoplay="true" id="arVideo">
 
-  <div class="coords">
-  </div>
-
-  <script type="text/javascript">
-
-    var video = document.querySelector("#arVideo");
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-    if (navigator.getUserMedia) {
-      navigator.getUserMedia({video: true}, handleVideo, videoError);
-    }
-    function handleVideo(stream) {
-      video.src = window.URL.createObjectURL(stream);
-    }
-    function videoError(e) {
-      alert('There was an error trying to get your camera stream :(');
-    }    
-   
-  </script>
 
 </body>
 </html>
