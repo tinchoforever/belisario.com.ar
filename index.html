@@ -22,27 +22,11 @@
 
 
 
-  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  <script src="aframe.min.js"></script>
   <script src="scripts/aframe-gif-shader.js"></script>
-  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v1.17.0/dist/aframe-extras.min.js"></script>
+
 </head>
   <link rel="stylesheet" href="styles/main.css">
-   <script>
-    var gyroPresent = false;
-    window.addEventListener("devicemotion", function(event){
-        if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
-            gyroPresent = true;
-    });
-
-   if (navigator.getVRDevices) {
-      console.log('vr')
-    } else if (navigator.mozGetVRDevices) {
-      console.log('vr')
-    } else {      
-      window.location =  window.location + '/no-vr'
-      console.log('no-vr')
-    }
-   </script>
    
 <body>
   <a-scene>
